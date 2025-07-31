@@ -1,0 +1,153 @@
+/* Technologies.css */
+.technologies-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.technologies-row {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 0;
+    position: relative;
+    width: max-content;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
+    
+    &:active {
+        cursor: grabbing;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    // Auto-scroll animation
+    &:hover {
+        animation-play-state: paused;
+    }
+    
+    // First row animation - scroll left
+    &:first-child {
+        animation: scrollLeft 70s linear infinite;
+    }
+    
+    // Second row animation - scroll right
+    &:last-child {
+        animation: scrollRight 65s linear infinite;
+    }
+}
+
+// Auto-scroll animations - truly infinite
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.technology-item {
+    flex-shrink: 0;
+    margin: 0 15px;
+}
+
+.technology-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.technology-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.technology-logo {
+    transition: filter 0.3s ease;
+    object-fit: contain;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.technology-box:hover .technology-logo {
+    filter: grayscale(0%);
+}
+
+.technology-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Mode sombre */
+.theme-dark .technology-logo {
+    filter: grayscale(100%) brightness(0.8);
+}
+
+.theme-dark .technology-box:hover .technology-logo {
+    filter: grayscale(0%) brightness(1);
+}
+
+.theme-dark .technology-box {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.theme-dark .technology-box:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .technology-item {
+        margin: 0 10px;
+    }
+    
+    .technology-logo {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .technology-name {
+        font-size: 0.75rem;
+    }
+    
+    .technology-box {
+        padding: 10px;
+        gap: 6px;
+    }
+}

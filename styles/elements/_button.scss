@@ -1,0 +1,260 @@
+//
+// Buttons //
+//
+a {
+	color: $color-black-07;
+	@include transition(linear 0.1s);
+	text-decoration: none;
+	&:hover {
+		color: black;
+		text-decoration: none;
+	}
+}
+button {
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+}
+a, button {
+	&:focus, &:active {
+		box-shadow: none;
+		outline: 0;
+	}
+}
+
+//
+// Regular Button //
+//
+.button {
+	display: inline-block;
+	position: relative;
+	background: $color-black-09;
+	color: white;
+	padding: 0.8em 2.4em;
+	border: 0;
+	border-radius: 0.5em;
+	font-size: 0.9em;
+	font-weight: 500;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	@include transition(ease-out 0.16s);
+	&:hover {
+		background: $color-black-08;
+		color: white;
+		text-decoration: none;
+	}
+	&.button-sm {
+		padding: 0.6em 1.8em;
+		font-size: 0.8em;
+	}
+	&.button-md {
+		padding: 1em 3em;
+		font-size: 1em;
+	}
+	&.button-lg {
+		padding: 1.2em 3.6em;
+		font-size: 1.1em;
+	}
+	&.button-dark {
+		background: $color-black-09;
+		&:hover {
+			background: $color-black-08;
+		}
+	}
+	&.button-white {
+		background: white;
+		color: $color-black-09;
+		&:hover {
+			background: $color-white-08;
+			color: $color-black-09;
+		}
+	}
+	&.button-outline {
+		background: transparent;
+		color: $color-black-09;
+		border: 2px solid $color-black-09;
+		&:hover {
+			background: $color-black-09;
+			color: white;
+		}
+		&.button-outline-white {
+			color: white;
+			border-color: white;
+			&:hover {
+				background: white;
+				color: $color-black-09;
+			}
+		}
+	}
+}
+
+//
+// Circle Button //
+//
+.button-circle {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+	color: black;
+	text-align: center;
+	@include transition(ease-out 0.12s);
+	i { line-height: 50px; }
+	&:hover {
+		color: $color-primary;
+	}
+	&.button-circle-sm {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		i { line-height: 40px; }
+	}
+	&.button-circle-lg {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		i { line-height: 60px; }
+	}
+}
+
+.button-circle-gray, a.button-circle-gray {
+	background: $color-black-01;
+	border: 0;
+	&:hover, &:focus {
+		background: $color-black-02;
+		color: black;
+	}
+}
+.button-circle-dark, a.button-circle-dark {
+	background: black;
+	border: 0;
+	color: white;
+	&:hover, &:focus {
+		background: $color-black-09;
+		color: white;
+	}
+}
+.button-circle-outline-dark, a.button-circle-outline-dark {
+	background: transparent;
+	border: 1px dashed black;
+	color: black;
+	&:hover, &:focus {
+		background: black;
+		color: white;
+	}
+}
+.button-circle-white, a.button-circle-white {
+	background: $color-white-015;
+	border: 0;
+	color: white;
+	&:hover, &:focus {
+		background: $color-white-02;
+		color: white;
+	}
+}
+
+.theme-dark {
+	.button-dark {
+		background: $color-white-015;
+		color: white;
+		&:hover {
+			background: $color-white-02;
+			color: white;
+		}
+	}
+
+	.button-outline-dark {
+		background: transparent;
+		border: 1px dashed white;
+		color: white;
+		&:hover {
+			background: white;
+			color: black;
+		}
+	}
+
+	.button-circle-outline-dark, .button-circle-outline-dark {
+		background: transparent;
+		border: 1px dashed white;
+		color: white;
+		&:hover, &:focus {
+			background: white;
+			color: black;
+		}
+	}
+
+	.button-circle-dark, a.button-circle-dark {
+		background: $color-white-015;
+		border: 0;
+		color: white;
+		&:hover, &:focus {
+			background: $color-white-02;
+			color: white;
+		}
+	}
+}
+
+// Scroll to Top Button
+.scroll-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: $color-black-09;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2em;
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	
+	&:hover {
+		background: $color-black-08;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	}
+	
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+}
+
+// Dark theme support for scroll to top
+.theme-dark, .bg-black, .bg-dark {
+	.scroll-to-top {
+		background: $color-white-09;
+		color: $color-black-09;
+		
+		&:hover {
+			background: $color-white-08;
+		}
+	}
+}
+
+// Responsive
+@media (max-width: 768px) {
+	.scroll-to-top {
+		bottom: 20px;
+		right: 20px;
+		width: 45px;
+		height: 45px;
+		font-size: 1.1em;
+	}
+}
+
+

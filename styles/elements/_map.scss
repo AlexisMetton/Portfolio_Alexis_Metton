@@ -1,0 +1,86 @@
+//
+// Google Map Styles //
+//
+.gmap { width: 100%; }
+.gmap-sm { height: 350px; }
+.gmap-md { height: 400px; }
+.gmap-lg { height: 450px; }
+@include breakpoint-less(md) {
+	.gmap-sm { height: 300px; }
+	.gmap-md { height: 350px; }
+	.gmap-lg { height: 400px; }
+}
+
+//
+// Contact Icons Styles //
+//
+.contact-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.phone-icon {
+    color: #25d366; // Vert WhatsApp
+}
+
+.email-icon {
+    color: #ea4335; // Rouge Gmail
+}
+
+.address-icon {
+    color: #4285f4; // Bleu Google Maps
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        .contact-icon {
+            transform: scale(1.1);
+        }
+        
+        .phone-icon {
+            color: #128c7e; // Vert plus foncé
+        }
+        
+        .email-icon {
+            color: #d32f2f; // Rouge plus foncé
+        }
+        
+        .address-icon {
+            color: #1976d2; // Bleu plus foncé
+        }
+    }
+}
+
+// Dark theme support
+.theme-dark, .bg-black, .bg-dark {
+    .phone-icon {
+        color: #4caf50; // Vert plus clair pour le thème sombre
+    }
+    
+    .email-icon {
+        color: #f44336; // Rouge plus clair pour le thème sombre
+    }
+    
+    .address-icon {
+        color: #2196f3; // Bleu plus clair pour le thème sombre
+    }
+    
+    .contact-link:hover {
+        .phone-icon {
+            color: #66bb6a;
+        }
+        
+        .email-icon {
+            color: #ef5350;
+        }
+        
+        .address-icon {
+            color: #42a5f5;
+        }
+    }
+}

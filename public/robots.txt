@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alexismetton.com/sitemap.xml
+
+# Crawl-delay pour être respectueux des serveurs
+Crawl-delay: 1
+
+# Bloquer les fichiers sensibles
+Disallow: /api/
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Autoriser les pages importantes
+Allow: /portfolio/
+Allow: /blog/
+
+# Bloquer les fichiers de développement
+Disallow: /.git/
+Disallow: /scripts/
+Disallow: /components/
+Disallow: /lib/ 

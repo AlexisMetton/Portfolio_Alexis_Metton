@@ -1,0 +1,81 @@
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0.5rem 0;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(50, 205, 50, 0.1);
+    color: $color-green;
+    padding: 0.25em 0.6em;
+    border-radius: 1.5em;
+    font-size: 0.7em;
+    font-weight: 500;
+    font-family: $font-family-mono;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(50, 205, 50, 0.2);
+    
+    &:hover {
+        background: rgba(50, 205, 50, 0.2);
+        color: $color-green;
+        transform: translateY(-1px);
+    }
+}
+
+// Styles pour les images de certification
+.certification-logo {
+    width: 160px !important;
+    height: revert-layer !important;
+    border-radius: 0.3em;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// Dark theme support
+.theme-dark, .bg-black, .bg-dark {
+    .skill-tag {
+        background: rgba(50, 205, 50, 0.15);
+        color: $color-green;
+        border-color: rgba(50, 205, 50, 0.3);
+        
+        &:hover {
+            background: rgba(50, 205, 50, 0.25);
+            color: $color-green;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-tags {
+        gap: 3px;
+    }
+    
+    .skill-tag {
+        font-size: 0.65em;
+        padding: 0.2em 0.5em;
+        letter-spacing: 0.2px;
+    }
+    
+    .certification-logo {
+        width: 140px !important;
+        //height: 140px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .certification-logo {
+        width: 120px !important;
+        //height: 120px !important;
+    }
+}

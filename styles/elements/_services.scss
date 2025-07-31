@@ -1,0 +1,226 @@
+//
+// Services //
+//
+.services-list {
+	margin: 0;
+	padding: 0;
+	.services-item {
+		list-style-type: none;
+		border-top: 1px dashed $color-black-02;
+		&:first-child {
+			border-top: 0;
+		}
+		.services-title {
+			i {
+				color: black;
+			}
+		}
+	}
+	@include breakpoint-above(xl) {
+		.services-item {
+			display: flex;
+			align-items: center;
+			padding: 30px 0;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				padding-bottom: 0;
+			}
+			.services-number {
+				min-width: 90px;
+				* {
+					margin-bottom: 0;
+				}
+			}
+			.services-title {
+				min-width: 270px;
+				padding-right: 36px;
+				* {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	@include breakpoint-less(lg) {
+		.services-item {
+			padding: 20px 0;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				padding-bottom: 0;
+			}
+			.services-number {
+				margin-bottom: 6px;
+			}
+		}
+	}
+}
+.theme-dark {
+	.services-list {
+		.services-item {
+			border-color: $color-white-02;
+			.services-title {
+				i {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+// Skills container styles
+.skills-container {
+	width: 100%;
+	overflow: hidden;
+	
+	.skills-row {
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
+		padding: 5px 0;
+		position: relative;
+		width: max-content;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+		cursor: grab;
+		user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		
+		&::-webkit-scrollbar {
+			display: none; /* Chrome, Safari and Opera */
+		}
+		
+		&:active {
+			cursor: grabbing;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		// Auto-scroll animation
+		&:hover {
+			animation-play-state: paused;
+		}
+		
+		// First row animation - scroll left
+		&:first-child {
+			animation: scrollLeft 70s linear infinite;
+		}
+		
+		// Second row animation - scroll right
+		&:last-child {
+			animation: scrollRight 65s linear infinite;
+		}
+	}
+	
+	.skill-pill {
+		display: inline-flex;
+		align-items: center;
+		border: 1px dashed rgba(0, 0, 0, 0.2);
+		border-radius: 2em;
+		margin-right: 7px;
+		padding: 0.5em 1em;
+		white-space: nowrap;
+		flex-shrink: 0;
+		transition: all 0.1s linear;
+		position: relative;
+		pointer-events: auto;
+		
+		i {
+			font-size: 1.2em;
+			// Skill icon colors
+			&.fa-shield-halved { color: #E74C3C; } // OWASP - Red
+			&.fa-dharmachakra { color: #326CE5; } // Kubernetes - Blue
+			&.fa-docker { color: #2496ED; } // Docker - Blue
+			&.fa-python { color: #3776AB; } // Python - Blue
+			&.fa-react { color: #61DAFB; } // React - Cyan
+			&.fa-symfony { color: #000000; } // Symfony - Black
+			&.fa-linux { color: #FCC624; } // Linux - Yellow
+			&.fa-bug { color: #FF6B6B; } // Tests d'intrusion - Red
+			&.fa-code { color: #6C5CE7; } // Infrastructure as Code - Purple
+			&.fa-chart-line { color: #00B894; } // Monitoring - Green
+			&.fa-git-alt { color: #F05032; } // Git - Orange
+			&.fa-certificate { color: #FFD700; } // Conformité ANSSI - Gold
+			&.fa-database { color: #4479A1; } // MySQL/MariaDB - Blue
+		}
+		
+		&:hover {
+			color: black;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			z-index: 1000; // Much higher z-index to ensure it's on top
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+// Service icon colors
+.services-list {
+	.services-item {
+		.services-title {
+			i {
+				// Service icon colors
+				&.bi-code-slash { color: #6C5CE7; } // Développement Web - Purple
+				&.bi-shield-check { color: #00B894; } // Cybersécurité - Green
+				&.bi-robot { color: #FD79A8; } // IA Productivity - Pink
+				&.bi-cloud-arrow-up { color: #74B9FF; } // Cloud & DevOps - Blue
+				&.bi-search { color: #FDCB6E; } // SEO - Yellow
+				&.bi-lock { color: #E17055; } // Sécurité & Conformité - Orange
+			}
+		}
+	}
+}
+
+// Auto-scroll animations - truly infinite
+@keyframes scrollLeft {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-25%);
+	}
+}
+
+@keyframes scrollRight {
+	0% {
+		transform: translateX(-25%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+// Dark theme support
+.theme-dark, .bg-black, .bg-dark {
+	.skills-container {
+		.skill-pill {
+			border-color: rgba(255, 255, 255, 0.3);
+			
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
+// Responsive adjustments
+@include breakpoint-less(md) {
+	.skills-container {
+		.skill-pill {
+			padding: 0.4em 0.8em;
+			font-size: 0.9em;
+			
+			i {
+				font-size: 1.1em;
+			}
+		}
+	}
+}

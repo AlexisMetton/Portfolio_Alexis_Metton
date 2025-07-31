@@ -1,0 +1,7 @@
+organization=alexismetton
+projectKey=alexismetton_portfolio-alexis-metton
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.65836
+dashboardUrl=https://sonarcloud.io/dashboard?id=alexismetton_portfolio-alexis-metton
+ceTaskId=AZhhikI2s8bZUk1bKmcw
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZhhikI2s8bZUk1bKmcw

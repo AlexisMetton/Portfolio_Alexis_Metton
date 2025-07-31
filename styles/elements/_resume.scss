@@ -1,0 +1,179 @@
+//
+// Resume //
+//
+
+// Education colors - more subtle
+$color-education: #6B9BD4; // Softer blue
+$color-education-light: #8FB3E0;
+$color-education-bg: rgba(107, 155, 212, 0.08);
+
+// Experience colors - more subtle
+$color-experience: #6BC47A; // Softer green
+$color-experience-light: #8FD19B;
+$color-experience-bg: rgba(107, 196, 122, 0.08);
+
+.resume-wrapper {
+	position: relative;
+	padding-left: 20px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		border-left: 1px dashed $color-black-02;
+	}
+	
+	// Education section styling - colors only on dates
+	&.education-section {
+		.resume-box {
+			.resume-date.education-date {
+				border-color: rgba(107, 155, 212, 0.3);
+				/* background: $color-education-bg; */
+				color: $color-education;
+				
+				&:before {
+					border-color: rgba(107, 155, 212, 0.3);
+				}
+				
+				&:after {
+					background: $color-education;
+				}
+			}
+			
+			&:hover {
+				.resume-date.education-date {
+					/* background: rgba(107, 155, 212, 0.12); */
+					color: $color-education;
+					transform: translateY(-1px);
+					box-shadow: 0 2px 8px rgba(107, 155, 212, 0.15);
+				}
+			}
+		}
+	}
+	
+	// Experience section styling - colors only on dates
+	&.experience-section {
+		.resume-box {
+			.resume-date.experience-date {
+				border-color: rgba(107, 196, 122, 0.3);
+				/* background: $color-experience-bg; */
+				color: $color-experience;
+				
+				&:before {
+					border-color: rgba(107, 196, 122, 0.3);
+				}
+				
+				&:after {
+					background: $color-experience;
+				}
+			}
+			
+			&:hover {
+				.resume-date.experience-date {
+					/* background: rgba(107, 196, 122, 0.12); */
+					color: $color-experience;
+					transform: translateY(-1px);
+					box-shadow: 0 2px 8px rgba(107, 196, 122, 0.15);
+				}
+			}
+		}
+	}
+	
+	.resume-box {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.resume-date {
+			position: relative;
+			display: inline-block;
+			border: 1px dashed $color-black-02;
+			border-radius: 2em;
+			margin-bottom: 1em;
+			padding: 0.5em 1em;
+			font-family: $font-family-mono;
+			font-size: 0.9em;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			font-weight: 500;
+			@include transition(all 0.3s ease);
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: -20px;
+				@include transform(translateY(-50%));
+				width: 20px;
+				height: 1px;
+				border-top: 1px dashed $color-black-02;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: -23px;
+				@include transform(translateY(-50%));
+				background: black;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+			}
+		}
+		&:hover {
+			.resume-date {
+				color: black;
+			}
+		}
+	}
+	@include breakpoint-less(md) {
+		.resume-box {
+			margin-bottom: 24px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// Color utility classes - more subtle
+.text-education {
+	color: $color-education !important;
+}
+
+.text-experience {
+	color: $color-experience !important;
+}
+
+.text-education-light {
+	color: $color-education-light !important;
+}
+
+.text-experience-light {
+	color: $color-experience-light !important;
+}
+
+.theme-dark {
+	.resume-wrapper {
+		&:before {
+			border-color: $color-white-02;
+		}
+		
+		.resume-box {
+			.resume-date {
+				border-color: $color-white-02;
+				&:before {
+					border-color: $color-white-02;
+				}
+				&:after {
+					background: white;
+				}
+			}
+			&:hover {
+				.resume-date {
+					color: white;
+				}
+			}
+		}
+	}
+}

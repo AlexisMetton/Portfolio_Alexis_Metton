@@ -1,0 +1,126 @@
+//
+// Typography Styles for SEO-friendly hierarchy //
+//
+
+// H1 - Main page title (only one per page)
+h1 {
+    font-size: 3.5rem;
+    font-weight: $font-weight-semi-bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    
+    &.display-2 {
+        font-size: 4rem;
+        font-weight: $font-weight-semi-bold;
+    }
+}
+
+// H2 - Section titles
+h2 {
+    font-size: 2.5rem;
+    font-weight: $font-weight-semi-bold;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    
+    &.title-heading {
+        font-size: 1rem;
+        font-weight: $font-weight-normal;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $color-black-05;
+        margin-bottom: 0.5rem;
+    }
+}
+
+// H3 - Subsection titles and counters
+h3 {
+    font-size: 2rem;
+    font-weight: $font-weight-medium;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    
+    &.display-4 {
+        font-size: 3rem;
+        font-weight: $font-weight-semi-bold;
+    }
+}
+
+// H4 - Sub-subsection titles
+h4 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-medium;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    
+    &.fw-medium {
+        font-weight: $font-weight-medium;
+    }
+}
+
+// H5 - Small titles and labels
+h5 {
+    font-size: 1.25rem;
+    font-weight: $font-weight-medium;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    
+    &.fw-medium {
+        font-weight: $font-weight-medium;
+    }
+}
+
+// H6 - Smallest titles and labels
+h6 {
+    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    
+    &.mono-heading {
+        font-family: $font-family-mono;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    &.title-heading {
+        font-size: 1rem;
+        font-weight: $font-weight-normal;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $color-black-05;
+    }
+}
+
+.title-heading-titre-six {
+    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $color-black-05;
+
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.mono-heading-titre-six {
+    font-family: $font-family-mono;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    font-weight: $font-weight-normal;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+// Dark theme support
+.theme-dark, .bg-black, .bg-dark {
+    h1, h2, h3, h4, h5, h6, .title-heading-titre-six {
+        color: white;
+    }
+    
+    h6.title-heading {
+        color: $color-white-05;
+    }
+} 
