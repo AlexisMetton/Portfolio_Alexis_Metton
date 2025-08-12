@@ -37,13 +37,15 @@ const SecurityProvider = ({ children }) => {
     // Désactiver les fonctionnalités dangereuses
     const disableDangerousFeatures = () => {
       // Désactiver eval
-      window.eval = () => {
-        throw new Error('eval is disabled for security reasons');
+      window.eval = function() {
+        console.warn('eval is disabled for security reasons');
+        return undefined;
       };
       
       // Désactiver Function constructor
-      window.Function = () => {
-        throw new Error('Function constructor is disabled for security reasons');
+      window.Function = function() {
+        console.warn('Function constructor is disabled for security reasons');
+        return function() {};
       };
     };
 

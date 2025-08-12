@@ -33,6 +33,12 @@ import PwnaImage1 from '@/public/images/portfolio/pwnagotchi_1.jpg';
 import PwnaImage2 from '@/public/images/portfolio/pwnagotchi_2.jpg';
 import PwnaImage3 from '@/public/images/portfolio/pwnagotchi_3.jpg';
 import MainImage from '@/public/images/portfolio/pwnagotchi_portfolio.jpg';
+import VoteChainImg from '@/public/images/portfolio/votechain.jpg';
+import VoteChainImg1 from '@/public/images/portfolio/votechain_1.jpg';
+import VoteChainImg2 from '@/public/images/portfolio/votechain_2.jpg';
+import VoteChainImg3 from '@/public/images/portfolio/votechain_3.jpg';
+import VoteChainImg4 from '@/public/images/portfolio/votechain_4.jpg';
+import VoteChainImg5 from '@/public/images/portfolio/votechain_5.jpg';
 
 const moisFrancais = {
   'Jan': 'Jan',
@@ -51,6 +57,139 @@ const moisFrancais = {
 
 // --- DÉBUT DU TABLEAU PROJECTS ---
 const projects = [
+    {
+        projectTitle: "VoteChain - Système de Vote Blockchain",
+        slug: "votechain",
+        seoTitle: "VoteChain - Système de Vote Blockchain | Alexis Metton",
+        seoDescription: "Application de vote décentralisée utilisant la blockchain pour garantir la transparence, l'immuabilité et la sécurité des votes.",
+        description: `
+           <div class="row g-4 mt-2">
+               <div class="col-12">
+                   <h2 class="fw-medium" style="color: rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); padding-bottom: 10px;">Système de Vote Décentralisé et Sécurisé sur Blockchain</h2>
+                   <p style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">VoteChain</strong> est une application de vote qui utilise la technologie blockchain pour garantir la transparence, l'immuabilité et la sécurité des processus de vote.</p>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">I. Contexte et Objectifs</h3>
+                   <p style="color: rgb(0, 0, 0);">Le projet illustre l'application pratique des concepts blockchain dans un contexte de gouvernance numérique, démontrant comment la technologie peut renforcer la confiance dans les processus démocratiques.</p>
+                   <p style="color: rgb(0, 0, 0);">L'objectif était de créer un système de vote transparent et immuable basé sur la blockchain, implémenter un chiffrement hybride pour la sécurité des données, développer une architecture full-stack moderne et assurer la gestion sécurisée des clés privées et des wallets.</p>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">II. Architecture Technique</h3>
+                   <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Stack de Développement</h4>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Frontend :</strong> React avec interface utilisateur moderne et Bootstrap</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Backend :</strong> Node.js/Express avec API REST sécurisée et middleware d'authentification</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Base de données :</strong> PostgreSQL avec Prisma ORM pour le stockage persistant</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Blockchain :</strong> Implémentation complète avec algorithme Proof of Work</li>
+                   </ul>
+                   <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Sécurité et Infrastructure</h4>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Chiffrement :</strong> AES-256-GCM + RSA-2048 pour la sécurité des données</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Containerisation :</strong> Docker et Docker Compose pour l'orchestration</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">CI/CD :</strong> GitHub Actions pour l'automatisation des tests et du déploiement</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Tests :</strong> Suite complète de tests automatisés (87/87 tests passants)</li>
+                   </ul>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">III. Fonctionnalités Développées</h3>
+                   <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Gestion des Wallets et Sécurité</h4>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);">Création et gestion sécurisée de wallets avec chiffrement des clés privées</li>
+                       <li style="color: rgb(0, 0, 0);">Gestion sécurisée des clés privées sans exposition en base de données</li>
+                       <li style="color: rgb(0, 0, 0);">Chiffrement hybride pour protéger les réponses de vote</li>
+                       <li style="color: rgb(0, 0, 0);">Vérification d'intégrité des données</li>
+                   </ul>
+                   <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Système de Vote</h4>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);">Création de votes avec questions personnalisables et options (Pour ou Contre)</li>
+                       <li style="color: rgb(0, 0, 0);">Soumission de votes chiffrés avec vérification d'intégrité</li>
+                       <li style="color: rgb(0, 0, 0);">Interface utilisateur intuitive pour toutes les opérations</li>
+                       <li style="color: rgb(0, 0, 0);">Système de résultats en temps réel avec visualisation</li>
+                   </ul>
+                   <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Blockchain et Consensus</h4>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);">Mining de blocs avec algorithme Proof of Work ajustable</li>
+                       <li style="color: rgb(0, 0, 0);">Validation et vérification de l'intégrité de la blockchain</li>
+                       <li style="color: rgb(0, 0, 0);">Implémentation d'un algorithme de consensus Proof of Work fonctionnel</li>
+                       <li style="color: rgb(0, 0, 0);">Architecture full-stack avec synchronisation temps réel</li>
+                   </ul>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">IV. Technologies et Compétences Développées</h3>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Développement Web :</strong> React, Node.js, Express.js, Bootstrap</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Base de données :</strong> PostgreSQL, Prisma ORM, gestion des données</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Blockchain :</strong> Implémentation Proof of Work, cryptographie appliquée</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Sécurité :</strong> AES-256-GCM, RSA-2048, PBKDF2, gestion des clés</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">DevOps :</strong> Docker, GitHub Actions, CI/CD, tests automatisés</li>
+                       <li style="color: rgb(0, 0, 0);">Architecture distribuée, sécurité applicative, développement full-stack</li>
+                   </ul>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">V. Défis et Solutions</h3>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Gestion des clés privées :</strong> Implémentation d'un système sécurisé sans exposition en base de données</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Consensus blockchain :</strong> Développement d'un algorithme Proof of Work fonctionnel et optimisé</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Chiffrement hybride :</strong> Combinaison AES-256-GCM et RSA-2048 pour la sécurité maximale</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Architecture temps réel :</strong> Synchronisation full-stack avec gestion des états</li>
+                       <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Tests automatisés :</strong> Suite complète de tests avec 100% de couverture</li>
+                   </ul>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">VI. Impact et Résultats</h3>
+                   <ul class="list-circle">
+                       <li style="color: rgb(0, 0, 0);">Système de vote fonctionnel avec 100% de tests passants</li>
+                       <li style="color: rgb(0, 0, 0);">Démonstration pratique des concepts blockchain et cryptographie</li>
+                       <li style="color: rgb(0, 0, 0);">Architecture sécurisée</li>
+                       <li style="color: rgb(0, 0, 0);">Documentation complète</li>
+                       <li style="color: rgb(0, 0, 0);">Base solide pour l'extension vers d'autres cas d'usage</li>
+                   </ul>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">VII. Aspects Éducatifs et Professionnels</h3>
+                   <p style="color: rgb(0, 0, 0);">Ce projet illustre la maîtrise des technologies blockchain, de la cryptographie appliquée et du développement full-stack moderne. Il démontre la capacité à concevoir et implémenter des systèmes complexes avec des exigences de sécurité élevées, tout en maintenant une architecture propre et testable.</p>
+                   <div style="background: rgb(242, 245, 248); border: 1px solid rgb(0, 0, 0); padding: 20px; border-radius: 6px; margin-top: 30px;">
+                       <p style="color: rgb(0, 0, 0); font-weight: 500; margin: 0; text-align: center;">VoteChain représente l'aboutissement d'un système de vote blockchain complet, démontrant l'importance de la transparence, de la sécurité et de l'immuabilité dans les processus démocratiques numériques.</p>
+                   </div>
+               </div>
+               <div class="col-12">
+                   <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">Lien du Projet</h3>
+                   <p style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Repository GitHub :</strong> <a href="https://github.com/AlexisMetton/VoteChain" target="_blank" style="color: rgb(0, 0, 0); text-decoration: underline;">github.com/AlexisMetton/VoteChain</a></p>
+                    <p style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Documentation GitBook :</strong> <a href="https://alexis-metton.gitbook.io/votechain" target="_blank" style="color: rgb(0, 0, 0); text-decoration: underline;">https://alexis-metton.gitbook.io/votechain</a></p>
+                </div>
+           </div>
+       `,
+        keywords: "blockchain, vote, sécurité, cryptographie, react, nodejs, postgresql, docker",
+        category: "web3",
+        services: "Développement Blockchain, Sécurité Applicative, Architecture Full-Stack",
+        client: "Projet Personnel",
+        duration: "En cours",
+        date: "Juin 01, 2025",
+        postedBy: "Alexis Metton",
+        imageSrc: VoteChainImg,
+        mainImage: VoteChainImg,
+        categories: [
+          {
+            "name": "Blockchain"
+          },
+          {
+            "name": "Sécurité"
+          },
+          {
+            "name": "Full-Stack"
+          },
+          {
+            "name": "Cryptographie"
+          }
+        ],
+        images: [
+            { image: VoteChainImg1 },
+            { image: VoteChainImg2 },
+            { image: VoteChainImg3 },
+            { image: VoteChainImg4 },
+            { image: VoteChainImg5 },
+        ]
+    },
        {
            projectTitle: 'KubeSecureBox - Laboratoire Cybersécurité',
            slug: 'kubesecurebox',
@@ -412,7 +551,7 @@ const projects = [
                </div>
            `,
            keywords: 'gcp, kubernetes, terraform, prometheus, cloud, devops, infrastructure',
-           category: 'infrastructure',
+           category: 'Infrastructure',
            services: 'Infrastructure Cloud, DevOps, Monitoring',
            client: 'Projet Personnel',
            duration: '1 semaine',
@@ -764,8 +903,8 @@ const projects = [
                    </div>
                </div>
            `,
-           keywords: 'wordpress plugin, scroll animation, css, développement web, premium',
-           category: 'Développement',
+           keywords: 'wordpress plugin, scroll animation, css, développement web',
+           category: 'Plugin',
            services: 'Développement WordPress, Animation CSS, UX',
            client: 'Commercialisation',
            duration: '2 mois',
@@ -885,7 +1024,7 @@ const projects = [
                </div>
            `,
            keywords: 'raspberry pi, serveur web, nas, matomo, hébergement, ssl',
-           category: 'infrastructure',
+           category: 'Infrastructure',
            services: 'Administration Système, Hébergement, Monitoring',
            client: 'Formation Bac+3',
            duration: '1 an et demi',
@@ -930,15 +1069,20 @@ export const portfolioData = {
            dataFilter: ".Cybersécurité"
        },
        {
-           title: "Développement",
-           classes: "Développement",
-           dataFilter: ".Développement"
+           title: "Plugin",
+           classes: "Plugin",
+           dataFilter: ".Plugin"
        },
        {
            title: "Infrastructure",
-           classes: "infrastructure",
-           dataFilter: ".infrastructure"
-       }
+           classes: "Infrastructure",
+           dataFilter: ".Infrastructure"
+       },
+       {
+        title: "Web3",
+        classes: "Web3",
+        dataFilter: ".Web3"
+    }
    ],
    projects,
 };
