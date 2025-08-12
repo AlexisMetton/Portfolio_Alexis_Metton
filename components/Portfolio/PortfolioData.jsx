@@ -160,7 +160,7 @@ const projects = [
            </div>
        `,
         keywords: "blockchain, vote, sécurité, cryptographie, react, nodejs, postgresql, docker",
-        category: "web3",
+        category: "Web3",
         services: "Développement Blockchain, Sécurité Applicative, Architecture Full-Stack",
         client: "Projet Personnel",
         duration: "En cours",
