@@ -9,16 +9,20 @@ const OUTPUT_FILE = path.join(__dirname, '../public/sitemap.xml')
 const portfolioData = {
     projects: [
         {
+            slug: 'cryptoshield',
+            date: 'Avr 01, 2025'
+        },
+        {
             slug: 'votechain',
-            date: 'Juin 01, 2025'
+            date: 'Avr 01, 2025'
         },
         {
             slug: 'kubesecurebox',
-            date: 'Mai 01, 2025'
+            date: 'Mar 01, 2025'
         },
         {
             slug: 'docker-redteam',
-            date: 'Jan 15, 2025'
+            date: 'Jan 10, 2025'
         },
         {
             slug: 'infrastructure-cloud',
@@ -26,11 +30,11 @@ const portfolioData = {
         },
         {
             slug: 'usb-scanner',
-            date: 'Dec 15, 2024'
+            date: 'Fev 01, 2025'
         },
         {
             slug: 'pwnagotchi',
-            date: 'Mai 01, 2025'
+            date: 'Fev 02, 2025'
         },
         {
             slug: 'scroll-motion-pro',
@@ -38,7 +42,7 @@ const portfolioData = {
         },
         {
             slug: 'serveur-perso',
-            date: 'Oct 15, 2024'
+            date: 'Dec 5, 2022'
         }
     ]
 }

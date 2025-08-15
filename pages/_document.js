@@ -18,8 +18,7 @@ export default function Document() {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//maps.googleapis.com" />
         
-        {/* Configuration des cookies sécurisés */}
-        <meta httpEquiv="Set-Cookie" content="HttpOnly; Secure; SameSite=Strict" />
+        {/* Configuration des cookies sécurisés - Supprimé car cause des erreurs CSP */}
       </Head>
       <body>
         <Main />

@@ -39,6 +39,14 @@ import VoteChainImg2 from '@/public/images/portfolio/votechain_2.jpg';
 import VoteChainImg3 from '@/public/images/portfolio/votechain_3.jpg';
 import VoteChainImg4 from '@/public/images/portfolio/votechain_4.jpg';
 import VoteChainImg5 from '@/public/images/portfolio/votechain_5.jpg';
+import CryptoShieldImg from '@/public/images/portfolio/cryptoshield.jpg';
+import CryptoShieldImg1 from '@/public/images/portfolio/cryptoshield_1.jpg';
+import CryptoShieldImg2 from '@/public/images/portfolio/cryptoshield_2.jpg';
+import CryptoShieldImg3 from '@/public/images/portfolio/cryptoshield_3.jpg';
+import CryptoShieldImg4 from '@/public/images/portfolio/cryptoshield_4.jpg';
+import CryptoShieldImg5 from '@/public/images/portfolio/cryptoshield_5.jpg';
+import CryptoShieldImg6 from '@/public/images/portfolio/cryptoshield_6.jpg';
+import CryptoShieldImg7 from '@/public/images/portfolio/cryptoshield_7.jpg';
 
 const moisFrancais = {
   'Jan': 'Jan',
@@ -57,6 +65,141 @@ const moisFrancais = {
 
 // --- DÉBUT DU TABLEAU PROJECTS ---
 const projects = [
+    {
+        projectTitle: "CryptoShield - Anonymisation Bitcoin",
+        slug: "cryptoshield",
+        seoTitle: "CryptoShield - Test CoinJoin Bitcoin | Alexis Metton",
+        seoDescription: "Application web pour tester la technique CoinJoin sur Bitcoin testnet. Interface moderne avec portefeuille intégré et analyse d'anonymat.",
+        description: `
+            <div class="row g-4 mt-2">
+                <div class="col-12">
+                    <h2 class="fw-medium" style="color: rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); padding-bottom: 10px;">Plateforme de Test CoinJoin pour Bitcoin Testnet</h2>
+                    <p style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">CryptoShield</strong> est une application web complète permettant de tester et comprendre la technique CoinJoin sur le réseau Bitcoin testnet. Cette plateforme offre une interface moderne pour expérimenter l'anonymisation des transactions Bitcoin de manière sécurisée et éducative.</p>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">I. Contexte et Objectifs</h3>
+                    <p style="color: rgb(0, 0, 0);">Le projet vise à démocratiser l'accès aux techniques d'anonymisation Bitcoin en fournissant un environnement de test sécurisé et pédagogique. L'objectif est de permettre aux développeurs et chercheurs de comprendre les mécanismes du CoinJoin sans risquer de vrais fonds.</p>
+                    <p style="color: rgb(0, 0, 0);">Les objectifs techniques incluent l'implémentation d'un portefeuille Bitcoin HD complet, la création d'un système de sessions CoinJoin, l'intégration avec les APIs testnet, et le développement d'une interface utilisateur moderne et intuitive.</p>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">II. Architecture Technique</h3>
+                    <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Stack de Développement</h4>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Frontend :</strong> HTML5, CSS3, JavaScript avec Bootstrap 5 et Chart.js</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Backend :</strong> Python Flask avec API REST et WebSockets</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Templates :</strong> Jinja2 pour le rendu dynamique</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Communication :</strong> Flask-SocketIO pour les mises à jour temps réel</li>
+                    </ul>
+                    <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Sécurité et Cryptographie</h4>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Cryptographie :</strong> PBKDF2, SHA256, RIPEMD160 pour la génération d'adresses</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Portefeuille :</strong> Implémentation HD Wallet (BIP32) pour testnet</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Sauvegarde :</strong> Système de sauvegarde automatique en JSON</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Validation :</strong> Vérification des adresses testnet et gestion d'erreurs</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">III. Fonctionnalités Développées</h3>
+                    <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Gestion du Portefeuille</h4>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);">Génération d'adresses Bitcoin testnet avec clés HD dérivées</li>
+                        <li style="color: rgb(0, 0, 0);">Gestion des UTXOs et calcul automatique des soldes</li>
+                        <li style="color: rgb(0, 0, 0);">Sauvegarde et restauration automatique du portefeuille</li>
+                        <li style="color: rgb(0, 0, 0);">Interface de copie d'adresses et liens vers explorateurs</li>
+                    </ul>
+                    <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Système CoinJoin</h4>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);">Création et gestion de sessions CoinJoin</li>
+                        <li style="color: rgb(0, 0, 0);">Simulation de participants et exécution de transactions</li>
+                        <li style="color: rgb(0, 0, 0);">Analyse du niveau d'anonymat et métriques de confidentialité</li>
+                        <li style="color: rgb(0, 0, 0);">Statistiques détaillées et visualisations</li>
+                    </ul>
+                    <h4 class="titre-cinq fw-medium mt-4" style="color: rgb(0, 0, 0);">Intégration Testnet</h4>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);">Connexion aux APIs publiques (Blockchain.info, BlockCypher)</li>
+                        <li style="color: rgb(0, 0, 0);">Vérification des soldes en temps réel</li>
+                        <li style="color: rgb(0, 0, 0);">Intégration avec les faucets testnet</li>
+                        <li style="color: rgb(0, 0, 0);">Gestion des erreurs et fallback automatique</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">IV. Technologies et Compétences Développées</h3>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Développement Web :</strong> Flask, Jinja2, Bootstrap, JavaScript, Chart.js</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Blockchain :</strong> Bitcoin testnet, génération d'adresses, gestion UTXOs</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Cryptographie :</strong> PBKDF2, SHA256, RIPEMD160, Base58</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">APIs :</strong> Intégration REST, WebSockets, gestion d'erreurs</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Sécurité :</strong> Validation d'adresses, gestion sécurisée des clés</li>
+                        <li style="color: rgb(0, 0, 0);">Architecture modulaire, tests unitaires, documentation complète</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">V. Défis et Solutions</h3>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Génération d'adresses :</strong> Implémentation complète du processus Bitcoin (version, hash, checksum)</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Sauvegarde portefeuille :</strong> Système automatique avec gestion des erreurs et restauration</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Intégration APIs :</strong> Fallback automatique entre différentes sources de données</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Interface utilisateur :</strong> Design responsive avec thème personnalisé et animations</li>
+                        <li style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Gestion d'erreurs :</strong> Système robuste avec messages informatifs et récupération automatique</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">VI. Impact et Résultats</h3>
+                    <ul class="list-circle">
+                        <li style="color: rgb(0, 0, 0);">Plateforme éducative complète pour l'apprentissage du CoinJoin</li>
+                        <li style="color: rgb(0, 0, 0);">Interface utilisateur moderne et intuitive</li>
+                        <li style="color: rgb(0, 0, 0);">Système de portefeuille fonctionnel avec sauvegarde automatique</li>
+                        <li style="color: rgb(0, 0, 0);">Intégration réussie avec l'écosystème Bitcoin testnet</li>
+                        <li style="color: rgb(0, 0, 0);">Base solide pour l'extension vers d'autres techniques d'anonymisation</li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">VII. Aspects Éducatifs et Professionnels</h3>
+                    <p style="color: rgb(0, 0, 0);">Ce projet démontre une compréhension des technologies blockchain, de la cryptographie appliquée et du développement web moderne. Il illustre la capacité à créer des outils éducatifs tout en maintenant une architecture propre et extensible.</p>
+                    <div style="background: rgb(242, 245, 248); border: 1px solid rgb(0, 0, 0); padding: 20px; border-radius: 6px; margin-top: 30px;">
+                        <p style="color: rgb(0, 0, 0); font-weight: 500; margin: 0; text-align: center;">CryptoShield représente une plateforme éducative pour l'exploration des techniques d'anonymisation Bitcoin, contribuant à la démocratisation de ces technologies complexes.</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h3 class="fw-medium" style="color: rgb(0, 0, 0); margin-top: 30px;">Lien du Projet</h3>
+                    <p style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Repository GitHub :</strong> <a href="https://github.com/AlexisMetton/CryptoShield" target="_blank" style="color: rgb(0, 0, 0); text-decoration: underline;">github.com/AlexisMetton/CryptoShield</a></p>
+                    <p style="color: rgb(0, 0, 0);"><strong style="color: rgb(0, 0, 0);">Documentation GitBook :</strong> <a href="https://alexis-metton.gitbook.io/cryptoshield" target="_blank" style="color: rgb(0, 0, 0); text-decoration: underline;">https://alexis-metton.gitbook.io/cryptoshield</a></p>
+                </div>
+            </div>
+        `,
+        keywords: "bitcoin, coinjoin, testnet, blockchain, anonymisation, flask, python, cryptographie",
+        category: "Web3",
+        services: "Développement Blockchain, Interface Web, Cryptographie Appliquée",
+        client: "Projet Personnel",
+        duration: "En cours",
+        date: "Avr 01, 2025",
+        postedBy: "Alexis Metton",
+        imageSrc: CryptoShieldImg,
+        mainImage: CryptoShieldImg,
+        categories: [
+            {
+                "name": "Blockchain"
+            },
+            {
+                "name": "Bitcoin"
+            },
+            {
+                "name": "CoinJoin"
+            },
+            {
+                "name": "Web3"
+            }
+        ],
+        images: [
+            { image: CryptoShieldImg1 },
+            { image: CryptoShieldImg2 },
+            { image: CryptoShieldImg3 },
+            { image: CryptoShieldImg4 },
+            { image: CryptoShieldImg5 },
+            { image: CryptoShieldImg6 },
+            { image: CryptoShieldImg7 },
+        ]
+    },
     {
         projectTitle: "VoteChain - Système de Vote Blockchain",
         slug: "votechain",
@@ -164,7 +307,7 @@ const projects = [
         services: "Développement Blockchain, Sécurité Applicative, Architecture Full-Stack",
         client: "Projet Personnel",
         duration: "En cours",
-        date: "Juin 01, 2025",
+        date: "Avr 01, 2025",
         postedBy: "Alexis Metton",
         imageSrc: VoteChainImg,
         mainImage: VoteChainImg,
@@ -286,7 +429,7 @@ const projects = [
            services: 'Architecture Sécurisée, DevSecOps, Monitoring',
            client: 'Projet Personnel',
            duration: 'En cours',
-           date: 'Mai 01, 2025',
+           date: 'Mar 01, 2025',
            postedBy: 'Alexis Metton',
            imageSrc: KubeSecureBoxImg,
            mainImage: KubeSecureBoxImg,
@@ -676,7 +819,7 @@ const projects = [
            services: 'Sécurité Endpoint, Automatisation, Scripts',
            client: 'Usage Personnel',
            duration: '2 semaines',
-           date: 'Fev 05, 2025',
+           date: 'Fev 01, 2025',
            postedBy: 'Alexis Metton',
            imageSrc: USBScannerImg,
            mainImage: USBScannerImg,
@@ -786,7 +929,7 @@ const projects = [
            services: 'Audit WiFi, Hardware Hacking, IA',
            client: 'Projet personnel',
            duration: '1 semaine',
-           date: 'Mai 01, 2025',
+           date: 'Fev 02, 2025',
            postedBy: 'Alexis Metton',
            imageSrc: PwnagotchiImg,
            mainImage: PwnagotchiImg,

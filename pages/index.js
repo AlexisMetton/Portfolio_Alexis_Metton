@@ -72,7 +72,7 @@ export default function Home() {
                 {/* Additional meta tags */}
                 <meta name="theme-color" content={mainData.themeColor} />
                 <meta name="msapplication-TileColor" content={mainData.msTileColor} />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                 <meta name="apple-mobile-web-app-title" content={mainData.websiteTitle} />
                 

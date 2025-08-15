@@ -31,13 +31,13 @@ const nextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
-              "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
+              "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net data:",
               "img-src 'self' data: https: blob:",
-              "connect-src 'self' https://maps.googleapis.com",
+              "connect-src 'self' https://maps.googleapis.com https://formspree.io",
               "frame-src 'self'",
               "object-src 'none'",
               "base-uri 'self'",
-              "form-action 'self'",
+              "form-action 'self' https://formspree.io",
               "frame-ancestors 'self'",
               "upgrade-insecure-requests"
             ].join('; ')
